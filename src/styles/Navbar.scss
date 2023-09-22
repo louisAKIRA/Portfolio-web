@@ -1,0 +1,25 @@
+$primary-color:#27005D;
+$text-primary-color:#E4F1FF;
+.nav_con{
+    font-family: monospace;
+    padding: 1.5rem;
+    background-color: $primary-color;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu ul{
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            a{
+                color: $text-primary-color;
+                font-size: 16px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+
