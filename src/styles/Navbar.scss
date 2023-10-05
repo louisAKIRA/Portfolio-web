@@ -1,13 +1,16 @@
 $primary-color:#27005D;
+$button-color:#9400FF;
+$bg-color:#AED2FF;
 $text-primary-color:#E4F1FF;
+
 .nav_con{
-    font-family: monospace;
     padding: 1.5rem;
     background-color: $primary-color;
     nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 6rem;
         .item_con ul{
             display: flex;
             gap: 1.5rem;

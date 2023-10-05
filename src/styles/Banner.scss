@@ -1,0 +1,38 @@
+$primary-color: #aed2ff;
+.banner {
+  display: flex;
+  width: 100%;
+  background-color: $primary-color;
+  .banner_con {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3rem;
+    .titel {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(15.5px);
+      -webkit-backdrop-filter: blur(15.5px);
+      border-radius: 10px;
+      width: 50%;
+      padding: 2rem;
+      h1 {
+        font-size: 60px;
+        text-align: center;
+      }
+      p {
+        padding: 2rem;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+    .img_me {
+      height: 350px;
+      img {
+        border-radius: 20px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
