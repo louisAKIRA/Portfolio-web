@@ -2,65 +2,44 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "./../styles/Navbar.scss";
+import { Link } from "react-router-dom";
 
 const NavbarItem = (props) => {
   return (
-    <div className="item_con">
-      <ul>
-        <il>
-          <a href="" className="item1">
-            Home
-          </a>
-        </il>
-        <il>
-          <a href="" className="item2">
-            Skills
-          </a>
-        </il>
-        <il>
-          <a href="" className="item3">
-            Works
-          </a>
-        </il>
-        <il>
-          <a href="" className="item4">
-            Contact
-          </a>
-        </il>
-        <il>
-          <a href="" className="item5">
-            {props.item}
-          </a>
-        </il>
-      </ul>
+    <div>
+      <il id={props.item}>
+        <Link to={props.tolink} className="item">
+          {props.item}
+        </Link>
+      </il>
     </div>
   );
 };
 
 function Navbar() {
-  const [name, setName] = useState("Home");
-  const [num, setNum] = useState({
-    num1: 1,
-    num2: 2,
-    num3: 3,
-    num4: 4,
-  });
+  // const [name, setName] = useState("Home");
+  // const [num, setNum] = useState({
+  //   num1: 1,
+  //   num2: 2,
+  //   num3: 3,
+  //   num4: 4,
+  // });
 
-  const SetNewName = () => {
-    setName("hi");
-  };
+  // const SetNewName = () => {
+  //   setName("hi");
+  // };
 
-  const UpNum = () => {
-    setNum((num) => ({
-      num1: num.num1 + 1,
-    }));
-  };
+  // const UpNum = () => {
+  //   setNum((num) => ({
+  //     num1: num.num1 + 1,
+  //   }));
+  // };
 
-  const LowNum = () => {
-    setNum((num) => ({
-      num1: num.num1 > 0 ? num.num1 - 1 : 0,
-    }));
-  };
+  // const LowNum = () => {
+  //   setNum((num) => ({
+  //     num1: num.num1 > 0 ? num.num1 - 1 : 0,
+  //   }));
+  // };
 
   return (
     <>
@@ -98,7 +77,15 @@ function Navbar() {
               </li>
             </ul>
           </div> */}
-          <NavbarItem item="Abous" />
+          <div className="item_con">
+            <ul>
+              <NavbarItem item="Home" tolink="/" />
+              <NavbarItem item="Skills" tolink="/skills" />
+              <NavbarItem item="Works" tolink="/works" />
+              <NavbarItem item="Contact" tolink="/contact" />
+              <NavbarItem item="Abous" tolink="/abous" />
+            </ul>
+          </div>
         </nav>
       </div>
     </>

@@ -13,16 +13,20 @@
     gap: 2.5rem;
 
     .card {
-      background-color: #6182ab;
+      box-sizing: border-box;
+      background-color: #aed2ff;
       padding: 1.5rem;
       width: 25%;
       border-radius: 10px;
       display: block;
-
+      border: 1px solid white;
+      box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(6px);
+      transition: all 0.5s;
+      cursor: crosshair;
       .card_img {
         display: flex;
         justify-content: center;
-
         img {
           width: auto;
           height: 150px;
@@ -34,6 +38,16 @@
         margin: 1rem 0;
         text-align: center;
       }
+      p {
+        font-size: 14px;
+      }
+    }
+    .card:hover {
+      border: 1px solid black;
+      transform: scale(1.05);
+    }
+    .card:active {
+      transform: scale(0.95) rotateZ(1.7deg);
     }
   }
 }
